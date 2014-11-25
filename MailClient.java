@@ -36,14 +36,10 @@ public class MailClient
         {
             System.out.println("There are no new e-mails");
         }
-        /**
-         * No he puesto:
-         * Else 
-         * {
-         *     item.print();
-         * }
-         * porque me daba error al compilar: "Cannot find symbol - method print()
-         */
+        else
+        {
+            item.printMail();
+        }
    }
     
    public void sendMailItem(String to, String message)
