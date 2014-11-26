@@ -1,15 +1,15 @@
 
 /**
- * Write a description of class MailClient here.
+ * Representa un cliente de correo electrónico
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
 public class MailClient
 {
-    // 
+    //Hace referencia al servidor asociado al cliente
     private MailServer server;
-    //
+    //Almacena la dirección de correo del usuario que usa el cliente
     private String user;
 
    /**
@@ -41,7 +41,8 @@ public class MailClient
             item.printMail();
         }
    }
-    
+   
+   //Envía un correo a la dirección idicada con el contenido pasado por parámetro 
    public void sendMailItem(String to, String message)
    {
        MailItem item = new MailItem(user, to, message);
