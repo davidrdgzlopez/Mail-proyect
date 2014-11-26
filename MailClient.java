@@ -48,4 +48,10 @@ public class MailClient
        MailItem item = new MailItem(user, to, message, subject);
        server.post(item);
    }
+   
+   //Muestra cuántos correos tiene ese usuario en el servidor
+   public void howManyMailItems()
+   {
+       System.out.println("You have " + server.howManyMailItems(user) + " new message(s)");
+   }
 }
