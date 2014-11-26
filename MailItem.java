@@ -13,15 +13,18 @@ public class MailItem
     private String to;
     //Almacena el contenido del mensaje
     private String message;
+    //Almacena el asunto del mensaje
+    private String subject;
 
     /**
      * Constructor for objects of class MailItem
      */
-    public MailItem(String from, String to, String message)
+    public MailItem(String from, String to, String message, String subject)
     {
         this.message = message;
         this.from    = from;
         this.to      = to;
+        this.subject = subject;
     }
     
     //Devuelve la dirección de destino del mensaje
@@ -51,5 +54,6 @@ public class MailItem
          System.out.println("To: " + to);
          System.out.println("From: " + from);
          System.out.println("Message: " + message);
+         System.out.println("Subject: " + subject);
     }
 }
