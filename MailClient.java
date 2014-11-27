@@ -54,4 +54,15 @@ public class MailClient
    {
        System.out.println("You have " + server.howManyMailItems(user) + " new message(s)");
    }
+   
+   //Responde automáticamente a un mensaje
+   public void getNextMailItemAutoRespond()
+   {
+       MailItem item;
+       item = server.getNextMailItem(user);
+       String newSubject = "RE: " + item.getSubject();
+       String newMessage = "###### \n Estamos de vacaciones \n ###### \n" + item. getMessage();
+       MailItem newMail = new MailItem(item.getTo(), item.getFrom(), newSubject, newMessage);
+       server.post(newMail);
+   }
 }

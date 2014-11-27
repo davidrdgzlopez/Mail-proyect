@@ -44,6 +44,12 @@ public class MailItem
     {
         return message;
     }
+    
+    //Devuelve el asunto del mensaje
+    public String getSubject()
+    {
+        return subject;
+    }
 
     /**
      * Imprime por pantalla los datos del email:
